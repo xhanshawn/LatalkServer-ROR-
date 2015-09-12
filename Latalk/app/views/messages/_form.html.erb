@@ -1,0 +1,62 @@
+<%= form_for(@message, html: { multipart: true }) do |f| %>
+  <% if @message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :message_type %><br>
+    <%= f.text_field :message_type %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :hold_time %><br>
+    <%= f.text_field :hold_time %>
+  </div>
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :race_num %><br>
+    <%= f.text_field :race_num %>
+  </div>
+  <div class="field">
+    <%= f.label :start_id %><br>
+    <%= f.text_field :start_id %>
+  </div>
+  <div class="field">
+    <%= f.label :like_num %><br>
+    <%= f.text_field :like_num %>
+  </div>
+  <div class="field">
+    <%= f.label :dislike_num %><br>
+    <%= f.text_field :dislike_num %>
+  </div>
+  <p>
+    <label>Image</label>
+    <%= image_tag(@message.image_url) if @message.image? %>
+    <%= f.file_field :image %>
+  </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

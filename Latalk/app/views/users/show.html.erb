@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+<% @user.messages.each do |message| %>
+	<p>
+ 	  <strong>Message: 
+ 	  	<%= message.message_type %>
+ 	  </strong>
+ 	  <br>
+ 	  <%= message.content %>
+	</p>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message type:</strong>
+  <%= @message.message_type %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @message.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @message.latitude %>
+</p>
+
+<p>
+  <strong>Hold time:</strong>
+  <%= @message.hold_time %>
+</p>
+<p>
+  <strong>User name:</strong>
+  <%= @message.user_name %>
+</p>
+<p>
+  <strong>Start id:</strong>
+  <%= @message.start_id %>
+</p>
+<p>
+  <strong>Race Num:</strong>
+  <%= @message.race_num %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @message.created_at.to_i %>
+</p>
+<p>
+  <strong>Now:</strong>
+  <%= Time.now + 3600 %>
+</p>
+<p>
+  <strong>Diff:</strong>
+  <%= (Time.now.to_i -  @message.created_at.to_i) %>
+</p>
+<p>
+  <strong>Like:</strong>
+  <%= @message.like_num %>
+</p>
+<p>
+  <strong>Dislike:</strong>
+  <%= @message.dislike_num %>
+</p>
+<%= link_to image_tag(@message.image.url) %>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

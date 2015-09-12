@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message_type: MyString
+  content: MyText
+  longitude: 1.5
+  latitude: 1.5
+  hold_time: 9.99
+
+two:
+  message_type: MyString
+  content: MyText
+  longitude: 1.5
+  latitude: 1.5
+  hold_time: 9.99

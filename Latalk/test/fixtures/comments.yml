@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  like: false
+  user_id: 
+  message_id: 
+
+two:
+  like: false
+  user_id: 
+  message_id: 
