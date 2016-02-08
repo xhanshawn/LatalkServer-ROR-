@@ -1,3 +1,3 @@
 # RubyOnRails
 
-This branch is reserved for server side application of an Android APP named Latalk. Current version is v0.01
+This repo is about api of my Android APP named Latalk.
